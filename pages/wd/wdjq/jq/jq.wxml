@@ -1,0 +1,24 @@
+<!--pages/wd/wdjq/jq/jq.wxml-->
+<view class='beijin'>
+  <view class='xiangqin'>
+    <view class='jq_t'>
+      <view class='shanghu'>
+       抵扣代金券
+      </view>
+      <view class='jiner'>
+        {{worth/100}}元代金券
+      </view>
+    </view>
+    <view class='btn_box'>
+      <button class='jq_btn' bindtap="shuru">立即使用</button>
+    </view>
+    
+    <view class='jq_num'>
+      奖券编号：{{couponId}}
+    </view>
+    <view class='state'>
+      <text class='stateInfo'>使用提示：</text>
+      <text class='stateContent'>用户使用时，请向商家出示此页面。此代金券只能在游戏合作商家内使用。商家输入手机号后使用完成，使用后代金券消失。</text>
+    </view>
+  </view>
+</view>

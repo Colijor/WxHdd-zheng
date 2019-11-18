@@ -1,0 +1,24 @@
+/* pages/wd/wdjq/jq/jq.wxss */
+page{
+  height: 100%;/*生效*/
+  position:absolute;
+}
+.beijin{
+  width: 750rpx;
+  height: 100%;
+  background:#CC463D;
+}
+.xiangqin{
+  width: 730rpx;
+  height: 70%;
+  background: white;
+  margin:0 auto;
+}
+.jq_t {font-size:75rpx;text-align:center;padding-top:10px;}
+.jq_btn{ width: 250rpx;height: 70rpx;background: #CC463D;text-align: center;line-height: 70rpx;}
+.btn_box{text-align: center;margin-top:80rpx;}
+.jq_num{font-size:45rpx;padding-left:30rpx;margin-top:50rpx;}
+.state{font-size:28rpx;padding-left:30rpx;margin-top:30rpx;display: flex}
+.stateInfo{flex: 1}
+.stateContent{flex: 4}
+

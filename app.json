@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/authorize/authorize",
+    "pages/index/index",
+    "pages/wd/wd",
+    "pages/wdfx/wdfx",
+    "pages/logs/logs",
+    "pages/wd/wdjq/wdjq",
+    "pages/wd/description/description",
+    "pages/wdfx/chongzhi/chongzhi",
+    "pages/wdfx/dengru/dengru",
+    "pages/wd/wdjq/jq/jq",
+    "pages/wd/wdjq/jq/shuru/shuru"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#Da251D",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "selectedIconPath": "icon/tabBarIcon/index1.png",
+        "iconPath": "icon/tabBarIcon/index.png",
+        "pagePath": "pages/index/index",
+        "text": "操作"
+      },
+      {
+        "selectedIconPath": "icon/tabBarIcon/wd1.png",
+        "iconPath": "icon/tabBarIcon/wd.png",
+        "pagePath": "pages/wd/wd",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

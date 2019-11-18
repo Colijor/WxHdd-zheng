@@ -1,0 +1,77 @@
+<!-- <view style='height:{{navH}}px;text-align:left;line-height:{{navH+15}}px;padding-left:10rpx' bindtap='back'>返回</view> -->
+<view class='fu'>
+  <view class='shouzi'>  
+     充值完成后可继续游戏
+  </view>
+  <view class='section_box'>
+      <view class="section single" wx:if="{{sections.length < 4 && index == 0}}" wx:for="{{sections}}" bindtap="wxpay" hover-class='bg' id='{{index}}' data-money='{{item.money}}'>
+          <view class='num'>{{item.name}}</view>
+          <view class='money'>（{{item.money/100}}元）</view>
+      </view>
+      <view class="section2" wx:if="{{sections.length < 4 && index != 0}}" wx:for="{{sections}}" bindtap="wxpay" hover-class='bg2' id='{{index}}' data-money='{{item.money}}'>
+          <view class='num'>{{item.name}}</view>
+          <view class='money'>（{{item.money/100}}元）</view>
+      </view>
+       <view class='countTime' wx:if="{{info == true}}">请在{{countdown}}内完成充值</view>
+       <view class='countTime' wx:if="{{isExit == true}}" style='color:red!important'>您已退出游戏，请重新扫码进入</view>
+  </view>
+
+  <view class='state'>
+    <view>如果您获得了代金券</view>
+    <view style='margin-top:20rpx'>请在<text style='color:blue;' bindtap='toWdjq'>我的奖券               </text>中查看</view>
+  </view>
+  <!-- <view class="survey {{surveyIsShow?'show':'hidden'}}">
+    <view class="comPage {{page1?'show':'hidden'}}">
+      <view class='pageTitle' style='text-align:center!important;padding:0;'>用户体验调查</view>
+      <view class='choice' bindtap='gameIsFun' hover-class='hoverChoice'>游戏好玩</view>
+      <view class='choice' bindtap='gameIsNotFun' hover-class='hoverChoice'>游戏不好玩</view>
+    </view>
+    <view class="comPage {{page2?'show':'hidden'}}">
+      <view class='pageTitle'>1、对于您来说</view>
+      <view class='choice ' bindtap='nextTo3' hover-class='hoverChoice' data-message='不喜欢玩这款游戏'>不喜欢玩这款游戏</view>
+      <view class='choice ' bindtap='nextTo3' hover-class='hoverChoice' data-message='不习惯这种操作方式'>不习惯这种操作方式</view>
+    </view>
+    <view class="comPage {{page3?'show':'hidden'}}">
+      <view class='pageTitle'>2、对于您来说这个游戏</view>
+      <view class='choice3' bindtap='nextTo4' hover-class='hoverChoice' data-message='太难'>太难</view>
+      <view class='choice3' bindtap='nextTo4' hover-class='hoverChoice' data-message='正常'>正常</view>
+      <view class='choice3' bindtap='nextTo4' hover-class='hoverChoice' data-message='太简单'>太简单</view>
+    </view>
+    <view class="comPage {{page4?'show':'hidden'}}">
+      <view class='pageTitle' style='font-size:32rpx;margin-bottom:10rpx!important'>3、对于我们提供的玩游戏得奖励</view>
+      <view class='pageTitle' style='font-size:32rpx;padding-left:100rpx;'>这种服务您会</view>
+      <view class='choice choice4' bindtap='nextTo5' hover-class='hoverChoice' data-message='赞'>赞</view>
+      <view class='choice choice4' bindtap='nextTo5' hover-class='hoverChoice' data-message='吐槽'>吐槽</view>
+    </view>
+    <view class="comPage {{page5?'show':'hidden'}}">
+      <view class='pageTitle' style='text-align:center!important;padding:0;'>用户体验调查</view>
+      <view class='choice' bindtap='nextToEnd' hover-class='hoverChoice' style='margin-top:60rpx;'>确认提交</view>
+    </view>
+    <view class="comPage {{pageEnd?'show':'hidden'}}">
+      <view class='thankPage'>谢谢参与</view>
+    </view>
+  </view> -->
+  <view class='state'>
+    <view>
+    点击<text class='icon-dianji icon-iconfont-dianji'></text>
+      <text style='color:blue;' bindtap="description">查看领红包攻略</text>
+    </view>
+    <view>关注公众号"红点点互动"领红包</view>
+  </view>
+  <!-- <view style="width:100%;position:relative;"> -->
+    <!-- <official-account style="position:absolute;top:20rpx;left:10%;width:80%;"></official-account> -->
+  <!-- </view> -->
+
+  <view class='bottomBar'>
+  <official-account style=""></official-account>
+    <view class='barItem' bindtap='handle'>
+      <image src='../../../icon/tabBarIcon/index.png'></image>
+      <text>操作</text>
+    </view>
+    <view class='barItem' bindtap='my'>
+      <image src='../../../icon/tabBarIcon/wd.png'></image>
+      <text>我的</text>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,57 @@
+<!-- wd  -->
+  <view class='wd'>
+      <view class='top'>
+  <!-- 头像昵称  -->
+        <view class='header'>
+          <open-data type="userAvatarUrl" class='headImg'></open-data>
+          <open-data type="userNickName" class='headNick'></open-data>
+        </view>
+        <view class='search'>
+          <view class="bar">
+            <input placeholder='请输入屏幕码' type='number' bindinput='bindinput' value='{{screenCode}}'></input>
+            <!-- <text class="icon icon-search" bindtap='iconTap'></text> -->
+          </view>
+          <button bindtap='iconTap'>确定</button>
+        </view>
+      </view>
+  <!-- 我的排名  -->
+    <view class='my_item_box'>
+          <view class='my_item' bindtap='wdpmFunc'>
+            <view>
+              <text class='iconfont-level icon-level'></text>
+              <text class='my_item_t'>我的排名</text>
+            </view>
+            <view>
+              <text class='iconfont-arrow-right icon-arrow-right'></text>
+            </view>
+          </view>
+    </view>
+    <!-- 我的奖券 -->
+    <view class='my_item_box'>
+          <view class='my_item' bindtap='wdjqFunc'>
+            <view>
+              <text class='iconfont icon-jiangquan'></text>
+              <text class='my_item_t'>我的奖券</text>
+            </view>
+            <view>
+              <text class='iconfont-arrow-right icon-arrow-right'></text>
+            </view>
+          </view>
+    </view>
+    <!-- 关注公众号领红包 -->
+    <view class='my_item_box'>
+          <view class='my_item' bindtap='description'>
+            <view>
+              <text class='icon-shouzhi icon-shouzhi-copy-copy'></text>
+              <text class='my_item_t'>关注公众号领红包</text>
+            </view>
+            <view>
+              <text class='iconfont-arrow-right icon-arrow-right'></text>
+            </view>
+          </view>
+    </view>
+    <view class="footer">
+      <!-- <text class="footerText">关注公众号"红点点互动"领红包</text> -->
+      <official-account style=""></official-account>
+    </view>
+  </view>

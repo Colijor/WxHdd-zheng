@@ -1,0 +1,93 @@
+page{
+  background: #dbdbdb;
+  height: 100%;/*生效*/
+}
+.nav{
+	width:100%;
+	height:100rpx;
+	display:flex;
+	flex-direction:row;
+  background: white;
+  position:fixed;
+  top: 0rpx;
+  z-index:2;
+}
+.default{
+	line-height:100rpx;
+	text-align:center;
+	flex:1;
+	color:#000;
+	font-weight:bold;
+	font-size:28rpx;
+}
+.red{
+	line-height:100rpx;
+	text-align:center;
+	color:#fc5558;
+	flex:1;
+	border-bottom:1px solid red;
+	font-weight:bold;
+	font-size:28rpx;
+}
+.show{
+	display:block;
+	widows: 750rpx;
+  background: #dbdbdb;
+  margin-top:130rpx;
+}
+.hidden{
+	display:none;
+	widows: 750rpx;
+  background: #dbdbdb;
+}
+
+
+.ticket_wrap{width: 100%;margin:14rpx auto;}
+.ticket_box{width: 94%;margin: 0 auto;border-radius:4rpx;position: relative}
+.ticket_main{display: flex;justify-content: space-between;}
+
+.ticket_value{flex: 1;color: #E32E26;text-align:center;position: relative;padding:0 10rpx;}
+.ticket_value_limit{flex: 1;color: #ffab5b;text-align:center;position: relative;padding:0 10rpx;}
+.ticket_btn{text-align:center;background:#E32E26;color: white;font-size: 22rpx;width: 120rpx;line-height: 70rpx;border-radius: 8rpx;position: absolute;top:2%;right:6%;
+}
+.ticket_btn_limit{text-align:center;background:#ffab5b;color: white;font-size: 22rpx;width: 120rpx;line-height: 70rpx;border-radius: 8rpx;position: absolute;top:2%;right:6%;
+}
+
+.ticket_value_content{position: absolute;left: 50%;top:60%;transform: translate(-50%,-50%)}
+.cash_sign{font-size: 34rpx}
+.cash_num{font-size: 48rpx}
+.ticket_content{flex: 4;}
+.ticket_t{color: #111111;font-size:40rpx;font-weight:bold;padding-top:10rpx;}
+.ticket_time{border-bottom: 4rpx solid #C6C5C5;position: relative;padding-top:45rpx;margin-right:10rpx;
+padding-bottom:10rpx;}
+.ticket_time text{font-size: 24rpx;color: #171717}
+.ticket_used{text-align:center;background: #dbdbdb;color: darkgray;font-size: 22rpx;width: 120rpx;line-height: 70rpx;position: absolute;top:2%;right:6%;border:2rpx solid darkgray;border-radius:50rpx;}
+
+.info_btn{font-size: 30rpx;padding:1% 0 1% 22%;}
+.info{background: #F5F3F3;padding: 0rpx 10rpx;width: 90%;margin-top: 20rpx;margin:10rpx auto 0}
+.infoH{display: none;}
+.infoS{display: block;}
+.info text{font-size: 24rpx;color:#171717 }
+.mark{display: none;}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 920735 */
+  src: url('//at.alicdn.com/t/font_920735_rab7avj60p.eot');
+  src: url('//at.alicdn.com/t/font_920735_rab7avj60p.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_920735_rab7avj60p.woff') format('woff'),
+  url('//at.alicdn.com/t/font_920735_rab7avj60p.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_920735_rab7avj60p.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:46rpx;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-left:300rpx;
+
+}
+
+.icon-less:before { content: "\e6a5"; }
+.markStyle{display: none}

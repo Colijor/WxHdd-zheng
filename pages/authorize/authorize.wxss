@@ -1,0 +1,79 @@
+.authorize {
+  text-align: center;
+}
+
+.header {
+  margin: 0 0 50rpx 50rpx;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  width: 650rpx;
+  height: 300rpx;
+  line-height: 450rpx;
+}
+
+.header image {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 0 !important;
+}
+
+.top image {
+  width: 100%;
+  height: 600rpx;
+}
+
+.content {
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  margin-bottom: 90rpx;
+}
+
+.loginTitle {
+  margin: 10rpx;
+  color: #fead10;
+}
+
+.info-wrap {
+  margin-top: 50rpx;
+  border: 4rpx solid #fead10;
+  border-radius: 8rpx;
+  padding: 40rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  display: table;
+  color: #fead10;
+}
+
+.info image {
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.info text {
+  display: inline-block;
+  font-size: 30rpx;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 100rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom button {
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  /* background-color: #FFDD00; */
+  background-color: #fead10;
+  color: #fff;
+  border-radius: 25rpx;
+  border: 0;
+}

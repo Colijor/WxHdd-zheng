@@ -1,0 +1,11 @@
+
+<view class='chongzhi'>
+        <view class='wdchongzhi' bindtap='chongzhiFunc'>
+          <text class='my_chongzhi'>充值中心</text>
+        </view>
+</view>
+<view class='dengru'>
+        <view class='wddengru' bindtap='dengruFunc'>
+          <text class='my_dengru'>用户登入</text>
+        </view>
+</view>

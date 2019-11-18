@@ -1,0 +1,20 @@
+<view class='beijin'>
+  <view class='xiangqin'>
+  <view class='couponTitle'><text wx:if="{{name}}">{{name}}</text><text wx:if="{{worth!=0}}">{{worth/100}}元</text></view>
+    <view class='state'>
+      请商家输入手机号码即可使用
+    </view>
+    <view class='phone_box'>
+      <text class='phone'>手机号码:</text>
+    <input type='number' placeholder-class="place-holder" class='phone_inpt' maxlength="11" name="userName" placeholder="请输入商家手机号"     bindinput="getPhone" />
+    </view>
+    <view class='userInfo'>
+      <view class='usrInfoT'>使用提示：</view>
+      <view class='usrInfoC'>
+      <view>用户使用时，请向商家出示此页面，商家输入手机号后使用完成，使用后此券消失。</view>
+      <!-- <view>{{description}}</view> -->
+      </view>
+    </view>
+    <view class='queding' bindtap='submitBtn'>确定</view>
+  </view>
+</view>

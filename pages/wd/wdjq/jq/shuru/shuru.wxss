@@ -1,0 +1,38 @@
+/* pages/wd/wdjq/jq/jq.wxss */
+page{
+  height: 100%;/*生效*/
+  position:absolute;
+}
+.beijin{
+  width: 750rpx;
+  height: 100%;
+  background:#CC463D;
+}
+.xiangqin{
+  width: 730rpx;
+  height: 86%;
+  background: white;
+  margin:0 auto;
+}
+.state{text-align: center;font-weight: bolder;font-size:45rpx;}
+.phone_box{text-align:center;margin-top:35rpx;display: flex;justify-content:center;align-items:Center;}
+.phone{font-weight: bold}
+.phone_inpt{ width: 400rpx;height: 60rpx;display:inline-block;border:1px solid darkgray;}
+.place-holder {font-size: 34rpx ; }
+.queding{
+  width: 250rpx;
+  height: 70rpx;
+  background: cyan;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 70rpx;
+  border-radius:10rpx;
+  position:relative;
+  top:130rpx;
+}
+.couponTitle{font-size:48rpx;color:#cc463d;text-align:center;padding:81rpx 0 70rpx;}
+.usrInfoT,.usrInfoC{font-size:30rpx;color: black;}
+.userInfo{justify-content: space-around;margin-top:80rpx;padding:0rpx 30rpx 0rpx 40rpx}
+.usrInfoT{width:150rpx;float: left}
+.usrInfoC{line-height: 50rpx;padding-left: 150rpx}
+.userInfo::after{display: block;content: "";clear: both;}

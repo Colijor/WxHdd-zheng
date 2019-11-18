@@ -1,0 +1,31 @@
+/* wd  */
+page{background-color: #f0f0f0;}
+/* 图片  */
+image{
+  width: 500rpx;
+  height: 500rpx;
+  margin-left: 130rpx;
+  margin-top: 200rpx;
+}
+.chongzhi .wdchongzhi{
+  height: 90rpx;
+  border: 1rpx solid #dbdbdb;
+  background-color: white;
+  margin-top: 30rpx;
+}
+.chongzhi .my_chongzhi{
+  line-height: 90rpx;
+  font-size: 35rpx;
+  margin-left: 20rpx;
+}
+.dengru .wddengru{
+  height: 90rpx;
+  border: 1rpx solid #dbdbdb;
+  background-color: white;
+  margin-top: 30rpx;
+}
+.dengru .my_dengru{
+  line-height: 90rpx;
+  font-size: 35rpx;
+  margin-left: 20rpx;
+}
