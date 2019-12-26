@@ -1,1 +1,65 @@
 /* pages/wd/description/description.wxss */
+.copy-btn{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 60rpx;
+  font-size: 35rpx;
+}
+.copy-btn-up{
+  background: linear-gradient(180deg, #ffe072 0%, #ffc600 100%);
+  color: #43240C;
+}
+.copy-btn-down{
+  background-color: #00B26A;
+  width: 630rpx;
+  color: #fff;
+}
+
+.tip-bottom{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tip-flex{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 60rpx;
+}
+.tip-content{
+  min-width: 350rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border: 6rpx solid #fff;
+  border-radius: 35rpx;
+  background-color: #9e9e9e;
+  color: #fff;
+  padding: 0 30rpx;
+  font-size: 34rpx;
+}
+.tip-title{
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 60rpx;
+  text-align: center;
+  border: 6rpx solid #fff;
+  background-color: #9e9e9e;
+  color: #fff;
+}
+.tip-second-content{
+  min-width: 400rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border: 6rpx solid #fff;
+  border-radius: 35rpx;
+  background-color: #9e9e9e;
+  color: #fff;
+  padding: 0 30rpx;
+  font-size: 34rpx;
+}

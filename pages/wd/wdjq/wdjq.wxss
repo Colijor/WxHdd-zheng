@@ -48,8 +48,9 @@ page{
 
 .ticket_value{flex: 1;color: #E32E26;text-align:center;position: relative;padding:0 10rpx;}
 .ticket_value_limit{flex: 1;color: #ffab5b;text-align:center;position: relative;padding:0 10rpx;}
-.ticket_btn{text-align:center;background:#E32E26;color: white;font-size: 22rpx;width: 120rpx;line-height: 70rpx;border-radius: 8rpx;position: absolute;top:2%;right:6%;
+.ticket_btn,.ticket_btn2{text-align:center;background:#E32E26;color: white;font-size: 22rpx;width: 120rpx;line-height: 70rpx;border-radius: 8rpx;position: absolute;top:2%;right:6%;
 }
+.ticket_btn2{background:rgb(4, 192, 76);}
 .ticket_btn_limit{text-align:center;background:#ffab5b;color: white;font-size: 22rpx;width: 120rpx;line-height: 70rpx;border-radius: 8rpx;position: absolute;top:2%;right:6%;
 }
 

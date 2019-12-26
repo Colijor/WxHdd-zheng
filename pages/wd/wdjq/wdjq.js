@@ -98,9 +98,6 @@ Page({
     };
 
     if (clickTime >= usedTime){
-      // wx.navigateTo({
-      //   url: 'jq/jq/?worth=' + worth + "&createTime=" + createTime + "&couponId=" + couponId + "&id=" + id,
-      // });
       wx.navigateTo({
         url: 'jq/shuru/shuru?id=' + id + "&worth=" + worth + "&name=" + name + "&description=" + description,
       });
@@ -181,6 +178,7 @@ Page({
           contentlistTem = [];
         };
         var contentlist = res.data.data;
+        console.log(contentlist);
         if (contentlist.length == 0 || res.data.totalCount == 0){
           var totalPages = 0;
         }else{
@@ -210,7 +208,11 @@ Page({
             var newObtain = nowDate - Date.parse(coupons[j].createTime)
             var days = Date.parse(coupons[j].deadline) - nowDate;
             if (newObtain <= 1000 * 60 * 60 * 24 * 3) {//离获得时间五天显示新获得状态
-              coupons[j].markImg = '../../../images/used.png';
+              if (coupons[j].type > 0){
+                coupons[j].markImg = '../../../images/used0.png';
+              }else{
+                coupons[j].markImg = '../../../images/used.png';
+              }
             } else {
               if (days <= 1000 * 60 * 60 * 24 * 30) {//离过期时间一个月显示快过期状态
                 coupons[j].markImg = '../../../images/unused.png';
@@ -238,6 +240,17 @@ Page({
       })
 
     })
+  },
+  copy: function (e) {
+    var that = this;
+    var secretWords = e.currentTarget.dataset.secretwords;
+    console.log(secretWords);
+    wx.setClipboardData({
+      data: secretWords,
+      success: function (res) {
+        console.log("复制成功");
+      }
+    });
   },
   /**
    * 生命周期函数--监听页面显示

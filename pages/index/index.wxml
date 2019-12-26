@@ -1,5 +1,5 @@
 <view>
-  <!-- <web-view src="http://h5.hdiandian.com/snake/index.html" bindmessage="bindmessage"></web-view> -->
+  <!-- <web-view src="https://h5.hdiandian.com/snake/index.html?boxNumber=10202&id=1"></web-view> -->
   <view wx:if="{{loadSuccess}}">
     <web-view src="{{src}}" bindmessage="bindmessage"></web-view>
   </view>

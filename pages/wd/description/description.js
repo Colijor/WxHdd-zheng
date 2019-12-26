@@ -5,14 +5,35 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    className: "copy-btn copy-btn-up",
+    content: "一键复制"
   },
 
+  copy: function (e) {
+    var that = this;
+    wx.setClipboardData({
+      data: "http://ttk.gzvip66.cn/api/index/login?pid=11826",
+      success: function (res) {
+        that.setData({
+          className: "copy-btn copy-btn-down",
+          content: "复制成功，请粘贴到浏览器打开领取"
+        });
+        setTimeout(function(){
+          that.setData({
+            className: "copy-btn copy-btn-up",
+            content: "一键复制"
+          });
+        },3000)
+      }
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // var pid = "11826";
+    // var url = encodeURI("http://ttk.gzvip66.cn/api/index/login?pid=11826");
+    // console.log(url);
   },
 
   /**

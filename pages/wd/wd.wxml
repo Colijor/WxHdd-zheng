@@ -43,7 +43,7 @@
           <view class='my_item' bindtap='description'>
             <view>
               <text class='icon-shouzhi icon-shouzhi-copy-copy'></text>
-              <text class='my_item_t'>关注公众号领红包</text>
+              <text class='my_item_t'>领取大礼包</text>
             </view>
             <view>
               <text class='iconfont-arrow-right icon-arrow-right'></text>
