@@ -1,0 +1,51 @@
+<view class='swiperContainer'>
+  <swiper autoplay="false" circular="true" bindchange="swiperChange">
+    <block wx:key='img' wx:for='{{picture}}'>
+      <swiper-item>
+        <image mode='aspectFill' src='{{item}}' class='slide-image img' />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="imageCount">{{current+1}}/{{picture.length}}</view>
+</view>
+
+<view class='modal'>
+  <view class="info">
+    <!-- <view class="bus_top">
+      <view class="bus_title">印象成都火锅店</view>
+      <view class="bus_adress">新安三路666号</view>
+    </view>
+    <view class="bus_bottom">
+      <view class="bus_info">
+        <view class="title">商家介绍：</view>
+        <view class="content">印象成都火锅是一家正宗的四川火锅，我们注重味道与品牌，在中国已经拥有666家连锁店，吃了的人都说好，印象成都火锅让你体验到舌尖的中国！</view>
+      </view>
+      <view class="bus_info">
+        <view class="title">商家品类：</view>
+        <view class="content">餐饮</view>
+      </view>
+      <view class="bus_info">
+        <view class="title">联系电话：</view>
+        <view class="content">7758258</view>
+      </view>
+    </view> -->
+    <view class="bus_top">
+      <view class="bus_title">{{busInfo.name}}</view>
+      <view class="bus_address">{{busInfo.city}}{{busInfo.area}}{{busInfo.address}}</view>
+    </view>
+    <view class="bus_bottom">
+      <view class="bus_info">
+        <view class="title">商家介绍：</view>
+        <view class="content">{{busInfo.introduce}}</view>
+      </view>
+      <view class="bus_info">
+        <view class="title">商家品类：</view>
+        <view class="content">{{busInfo.occupation}}</view>
+      </view>
+      <view class="bus_info">
+        <view class="title">联系电话：</view>
+        <view class="content">{{busInfo.fixedPhone}}</view>
+      </view>
+    </view>
+  </view>
+</view>

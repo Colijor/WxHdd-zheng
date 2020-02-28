@@ -59,9 +59,10 @@ page{
 .cash_num{font-size: 48rpx}
 .ticket_content{flex: 4;}
 .ticket_t{color: #111111;font-size:40rpx;font-weight:bold;padding-top:10rpx;}
-.ticket_time{border-bottom: 4rpx solid #C6C5C5;position: relative;padding-top:45rpx;margin-right:10rpx;
+.ticket_time{border-bottom: 4rpx solid #C6C5C5;position: relative;padding-top:10rpx;margin-right:10rpx;
 padding-bottom:10rpx;}
 .ticket_time text{font-size: 24rpx;color: #171717}
+.ticket_business{border-bottom: 4rpx solid #C6C5C5;position: relative;padding-top:10rpx;margin-right:10rpx;padding-bottom:10rpx;font-size: 30rpx;display: flex;justify-content: space-between;}
 .ticket_used{text-align:center;background: #dbdbdb;color: darkgray;font-size: 22rpx;width: 120rpx;line-height: 70rpx;position: absolute;top:2%;right:6%;border:2rpx solid darkgray;border-radius:50rpx;}
 
 .info_btn{font-size: 30rpx;padding:1% 0 1% 22%;}
@@ -92,3 +93,30 @@ padding-bottom:10rpx;}
 
 .icon-less:before { content: "\e6a5"; }
 .markStyle{display: none}
+
+/* 导航和商家介绍图标 */
+@font-face {
+    font-family: 'iconfont2';
+    src: url(data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAANIAA0AAAAAB6AAAALxAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0ZGVE0cGh4GVgCCShEICoJ8glYLDAABNgIkAxIEIAWFCAc8G4cGyI7Ctm0TZ6FMpjP4q0YQrWXVM71BUqeDLjou/AyKQPi4BxSGhYywLxSBIhR6f/Tv/ZNCTE2n1C5oNu8rP4C5/3NNvSi8E/jP751LrgIrNaJoPBzQaIJtRZXCs4GdTnXGG9DbRFxSeSsEvBlRYgF8JJGH3LUDA5gCilClkCiIFA80lJvlGLgPvD/+wmKwUDQVN3HfeYd4sP4h+EGBvqqtcopBnJ8AVFR0ILCCXqCDwSzQJYWSN/bcAlh70R+iLyEAoosAREEB/zwC8KpoWyigAX3oxSVgG5AAaOTAQCY3aVwshvoQSPsYdPM+4PpdCWbyNySnGBBP5jQQsusCRcUjNORmwnXo9jUevHHYo8kNUaFwiX/VjY7gxl0AGgraoqE0zqIxsmaO0hTrEqJQ8pQq/wnla28q9bnyjgFjBoW7w9hgl3AOfzpi4BpKkDvi4jKAebd3VOGqAaoE2o4nupiMIHZPcnIrlGLV4O7O2gsxjY2MqOiTTKSWGL5/Z1haksn5ExLxUjSI5//qUUD5ukadE8P2/+/selsbsZFGDu9NvOoXB8pVfcLpH7646IXYenFhPO3+wlxXjH2tLDwiAgAgEHTv3FaN4l76z8Keps5q2q2EuoUeBQTDvThB4n8cQCYgkXACQmMVIyjo04cWwJgXEIBJ6hAIPQ5BoOh2DQJVj+sCpB7PBGj0ew4BuvT4DAH6LIQtINBvPNpUkb2YBzaEEbZQDDkN1Yh8NMkGaEyZhi4jzqDPEV8m95uOTGCzLFeCGETliYfFKhamiJMlU+IYgo2+23x5VpX/+t5fKjuELwc4IEGSfOli5IJ/tvWavHdKeESCXHlS6jEdmrTBaW94HU3trOj66EwJcvu5S54CSXQRRCIsUa4sGTDHIrRIkC5dFixbriypEsQhNMGLgsy8giRdQhLPh/JbsfIhTf//4M8BXEQQ2Uxp0ZJYsldTXJ02OLzbEjPL659hgR1EH7ZJg1CiRO06E5MSH5PJspYBAAAA) format('woff2'),
+        url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAU4AA0AAAAAB6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAFHAAAABoAAAAciozknUdERUYAAAT8AAAAHgAAAB4AKQALT1MvMgAAAZwAAABCAAAAVjyDSBdjbWFwAAAB8AAAAEYAAAFK5krpxGdhc3AAAAT0AAAACAAAAAj//wADZ2x5ZgAAAkQAAAE1AAABfHr2AvxoZWFkAAABMAAAAC8AAAA2GAgBkWhoZWEAAAFgAAAAHAAAACQH3gOFaG10eAAAAeAAAAAQAAAAEgxaAABsb2NhAAACOAAAAAwAAAAMAEoAvm1heHAAAAF8AAAAHgAAACABFABRbmFtZQAAA3wAAAFJAAACiCnmEVVwb3N0AAAEyAAAACoAAAA8TLGjRnjaY2BkYGAAYnHvA/Pi+W2+MnCzMIDArZK4Uwj6fwMLA3MDkMvBwAQSBQAmxwptAHjaY2BkYGBu+N/AEMPCAAJAkpEBFbAAAEcKAm142mNgZGBgYGVwBWIQYAJiLiBkYPgP5jMAABABAWYAAHjaY2BkYWCcwMDKwMDUyXSGgYGhH0IzvmYwYuQAijKwMjNgBQFprikMDs9En6kyN/xvYIhhbmBoAAozguQA3zUMFQAAeNpjYYAAFihmiAIAAPQAZ3jaY2BgYGaAYBkGRgYQcAHyGMF8FgYNIM0GpBkZmJ6JPlP9/5+BAUJLvpO8D1UPBIxsDHAOIxOQYGJABYwMwx4AAOjkCtcAAAAAAAAAAAAAAEoAvnjaTY/BSsNAEIZnNtlErKS01ATRmkZhA1biQWNr0NCD6ClGKhQRrQdPvYpXJSC+RvHkCxR9ipx6jId68hjoXVPHVkt3mOH/l/8bdoEDjCIZpAhyYMAymLAOwAXYu1DTwVBAUkAlQVYAWouW+9cMkmzAOVpJghbn2SCJsyH5fBxjnvwwu8Moi/47mk0SKb1TJJ5Bvl8rz1RAR4aL0aP0It2P37QBhwDooO1jbRUNDSUNVRJknbEu6SbqxV/vo0tXFHVwC4Ut3AlSUhUqDRmEHcY64WR6AWLgeQFjgddL+VpFER/njbfWpsPTXvmmbnpLC7m5qtzvdvtytWDs7fhtLE/xsIONKU+7TKL2b7fn/eyzoMQP9afjXvp1wK6PxKkoFrTmJW2hXVdNc+WscdKib/4AHs1gKQAAAHjafZA9TgMxEIWf8wckEkIgqF1RANr8lCkTKfQIpaNINt6QaNdeeZ1IOQEtFQeg5RgcgBsg0XIKXpZJkyJr7ejzm5nnsQGc4xsK/98l7oQVjvEoXMERMuEq9RfhGvlduI4WPoUb1H+Em7hVA+EWLtQbHVTthLub0m3LCmcYCFdwiifhKvWVcI38KlzHFT6EG9S/hJsY41e4hWtlqQzhYTBBYJxBY4oN4wIxHCySMgbWoTn0ZhLMTE83ehE7mzgbKO9XYpcDHmg554Ap7T23Zr5KJ/5gy4HUmG4eBUu2KY0uInQoG18snNXdqHOw/Z7ttrTYv2uBNcfsUQ1s1Pw92zPSSGwMr5CSNfIyt6QSU49oa6zxu2cp1vNeCIlOvMv0iMeaNHU6925p4sDi5/KMHH20uZI996gcPmNZCHm/3U7EIIpdhj+T2HEZAAAAeNpjYGKAAC4wyciADljBokyMTIzMbMmJmSmJeRw5+cmJJZn5eQAxWgXkAAAAAAAB//8AAgABAAAADAAAABYAAAACAAEAAwAEAAEABAAAAAIAAAAAeNpjYGBgZACCq0vUOUD0rZK4UzAaAECPBpYAAA==) format('woff'),
+        url('iconfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.iconfont2 {
+  font-family: "iconfont2" !important;
+  font-size: 30rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-location:before {
+  content: "\e625";
+  margin-right: 8rpx;
+}
+
+.icon-caidan:before {
+  content: "\e615";
+  margin-right: 8rpx;
+}
