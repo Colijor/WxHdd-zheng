@@ -252,13 +252,6 @@ Page({
       }
     });
   },
-  toIntroduce: function (e) {
-    var businessId = e.currentTarget.dataset.id;
-    console.log(businessId);
-    wx.navigateTo({
-      url: '../businessInfor/businessInfor?id='+businessId,
-    })
-  },
   /**
    * 生命周期函数--监听页面显示
    */

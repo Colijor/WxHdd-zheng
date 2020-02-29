@@ -92,11 +92,6 @@
           <text>有效时间：\n{{item.createTime}}-{{item.deadline}}</text>
           <view class='ticket_used' data-id='{{item.id}}' data-worth="{{item.worth}}" data-createTime="{{item.createTime}}" data-used='{{item.used}}' data-couponId="{{item.couponId}}">已过期</view> 
         </view>
-        <view class='ticket_business'>
-          <view><text class='iconfont2 icon-location'>搜周边</text></view>
-          <view><text class='iconfont2 icon-location'>导航到</text></view>
-          <view bindtap="toIntroduce" data-id='{{item.businessId}}'><text class='iconfont2 icon-caidan'>商家介绍</text></view>
-        </view>
       </view>
     </view>
     <view class='info_btn' bindtap='toggleBtn' data-flag='false' id='{{item.id}}'>使用提示<text class="iconfont icon-less"></text></view>
