@@ -46,7 +46,7 @@ Page({
               app.globalData.userInfo = res.userInfo;
               wx.login({
                 success: res => {
-                  console.log(res);
+                  console.log(res.code);
                   // 获取到用户的 code 之后：res.code
                   // 可以传给后台，再经过解析获取用户的 openid
                   wx.request({
@@ -59,7 +59,7 @@ Page({
                     },
                     success: res => {
                       app.globalData.openId = res.data.data.openId;
-                      console.log(res.data.data.openId);
+                      console.log(res);
                       this.getUserId();
                     }
                   });
@@ -75,15 +75,6 @@ Page({
           });
           console.log("没有授权")
         }
-      }
-    });
-    //获取当前位置
-    wx.getLocation({
-      type: 'gcj02',
-      success: (res) => {
-        console.log(res)
-        app.globalData.latitude = res.latitude;
-        app.globalData.longitude = res.longitude;
       }
     });
   },

@@ -154,12 +154,10 @@ Page({
       type: 'gcj02',
       success: (res) => {
         console.log(res)
-        this.setData({
-          latitude: res.latitude,
-          longitude: res.longitude
-        })
+        app.globalData.latitude = res.latitude;
+        app.globalData.longitude = res.longitude;
       }
-    })
+    });
   },
   back:function(){
     wx.switchTab({
