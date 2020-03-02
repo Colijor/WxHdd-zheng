@@ -76,7 +76,16 @@ Page({
           console.log("没有授权")
         }
       }
-    })
+    });
+    //获取当前位置
+    wx.getLocation({
+      type: 'gcj02',
+      success: (res) => {
+        console.log(res)
+        app.globalData.latitude = res.latitude;
+        app.globalData.longitude = res.longitude;
+      }
+    });
   },
   onShow: function() {
   },

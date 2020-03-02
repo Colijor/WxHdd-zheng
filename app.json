@@ -7,11 +7,18 @@
     "pages/logs/logs",
     "pages/wd/wdjq/wdjq",
     "pages/wd/description/description",
+    "pages/wd/businessInfor/businessInfor",
+    "pages/wd/prizePoster/prizePoster",
     "pages/wdfx/chongzhi/chongzhi",
     "pages/wdfx/dengru/dengru",
     "pages/wd/wdjq/jq/jq",
     "pages/wd/wdjq/jq/shuru/shuru"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于导航寻找附近的商家优惠券"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ffffff",

@@ -1,3 +1,4 @@
+@import "../../../app.wxss";
 page{
   background: #dbdbdb;
   height: 100%;/*生效*/
@@ -59,9 +60,10 @@ page{
 .cash_num{font-size: 48rpx}
 .ticket_content{flex: 4;}
 .ticket_t{color: #111111;font-size:40rpx;font-weight:bold;padding-top:10rpx;}
-.ticket_time{border-bottom: 4rpx solid #C6C5C5;position: relative;padding-top:45rpx;margin-right:10rpx;
+.ticket_time{border-bottom: 4rpx solid #C6C5C5;position: relative;padding-top:10rpx;margin-right:10rpx;
 padding-bottom:10rpx;}
 .ticket_time text{font-size: 24rpx;color: #171717}
+.ticket_business{border-bottom: 4rpx solid #C6C5C5;position: relative;padding-top:10rpx;margin-right:10rpx;padding-bottom:10rpx;font-size: 30rpx;display: flex;justify-content: space-between;}
 .ticket_used{text-align:center;background: #dbdbdb;color: darkgray;font-size: 22rpx;width: 120rpx;line-height: 70rpx;position: absolute;top:2%;right:6%;border:2rpx solid darkgray;border-radius:50rpx;}
 
 .info_btn{font-size: 30rpx;padding:1% 0 1% 22%;}

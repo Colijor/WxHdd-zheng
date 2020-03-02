@@ -16,7 +16,19 @@ Page({
     hasMoreData: true,
     contentlist: [],
     //used0:未使用,1:已使用,2:已过期
-    used: 0
+    used: 0,
+  },
+  // 导航
+  navigate: function (e) {
+    var address = e.currentTarget.dataset.addr;
+    ////使用微信内置地图查看标记点位置，并进行导航
+    wx.openLocation({
+      scale: 28, // 缩放比例
+      name: address,
+      address: "目的地",
+      latitude: app.globalData.latitude,//要去的纬度-地址
+      longitude: app.globalData.longitude,//要去的经度-地址
+    })
   },
   selected: function (e) {
     var that = this;
@@ -137,6 +149,17 @@ Page({
     setTimeout(function () {
       that.getCouponsInfo('正在加载数据...');
     }, 2000);
+    //获取当前位置
+    wx.getLocation({
+      type: 'gcj02',
+      success: (res) => {
+        console.log(res)
+        this.setData({
+          latitude: res.latitude,
+          longitude: res.longitude
+        })
+      }
+    })
   },
   back:function(){
     wx.switchTab({
@@ -251,6 +274,13 @@ Page({
         console.log("复制成功");
       }
     });
+  },
+  toIntroduce: function (e) {
+    var businessId = e.currentTarget.dataset.id;
+    console.log(businessId);
+    wx.navigateTo({
+      url: '../businessInfor/businessInfor?id='+businessId,
+    })
   },
   /**
    * 生命周期函数--监听页面显示

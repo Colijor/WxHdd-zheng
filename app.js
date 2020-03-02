@@ -27,7 +27,9 @@ App({
     boxId: "",
     code: "",
     ip: "",
-    serverUrl: 'https://h5.hdiandian.com' // 测试地址
-    // serverUrl: 'https://h5.hdiandian.com', // 正式地址 memberId: "94180",boxId: "408d5cbc1371",11
+    serverUrl: 'https://h5.hdiandian.com', // 测试地址
+    // 用户当前位置经纬度
+    latitude: 23.099994,
+    longitude: 113.324520,
   }
 })
