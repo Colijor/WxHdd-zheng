@@ -70,18 +70,32 @@
 .modal .info .bus_info{
   display: flex;
   font-size: 30rpx;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.modal .info .bus_info2{
+  display: flex;
+  font-size: 30rpx;
   height: 74rpx;
   line-height: 74rpx;
   border-bottom: 1rpx solid #eee;
 }
 
-.modal .info .bus_info .title{
+.modal .info .bus_info .title,.modal .info .bus_info2 .title{
   flex: 0.8;
   font-weight: 700;
 }
 
 .modal .info .bus_info .content{
   flex: 3;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .modal .info .bus_content{
@@ -94,18 +108,22 @@
   justify-content: space-between;
 }
 
-.modal .info .bus_address{
-  width: 90%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.modal .info .bus_info2 .content{
+  flex: 2.5;
   border-right: 1rpx solid #eee;
 }
 
-.modal .info .bus_phone{
-  width: 10%;
-  text-align: right;
+.modal .info .bus_address{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
+
+.modal .info .bus_phone{
+  flex: 0.5;
+  text-align: center;
+}
+
 .modal .info .bus_phone>text{
   font-size: 40rpx;
 }

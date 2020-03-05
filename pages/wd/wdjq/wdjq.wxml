@@ -7,9 +7,9 @@
 <!-- 未使用 -->
 <view class="{{selected?'show':'hidden'}}">
   <view class='ticket_wrap' wx:for="{{contentlist}}" wx:if="{{item.used == 0}}" wx:key="{{item.id}}">
-    <view class='ticket_box' style='background:url(https://h5.hdiandian.com/cash_bg.png) no-repeat;background-size:100% 100%;'>
+    <view class='ticket_box' catchtap="showMask" data-prizeid='{{item.prizeId}}' data-id='{{item.id}}' data-time='{{item.createTime}}' style='background:url(https://h5.hdiandian.com/cash_bg.png) no-repeat;background-size:100% 100%;'>
       <image src="{{item.markImg}}" class="" style='position:absolute;top:0;left:0;width: 90rpx;height:90rpx;'></image>
-      <view class='ticket_main' bindtap="showMask1" data-indx='{{index}}' data-markImg="{{item.markImg}}" data-id='{{item.id}}' data-worth="{{item.worth}}"   data-couponId="{{item.couponId}}"  data-time='{{item.createTime}}' data-name='{{item.name}}' data-description='{{item.description}}'>
+      <view class='ticket_main'>
         <view class='ticket_value'>
           <view class='ticket_value_content'>
             <text class='cash_sign' wx:if="{{item.worth!=0}}">￥</text>
@@ -21,18 +21,17 @@
           <view class='ticket_t' wx:if="{{!item.name}}">恭喜获得抵扣代金券</view>
           <view class='ticket_time'>
             <text>有效时间：\n{{item.createTime}}-{{item.deadline}}</text>
-            <view class='ticket_btn' wx:if="{{item.type == 0}}" catchtap="showMask2" data-id='{{item.id}}' data-worth="{{item.worth}}" 
-            data-time='{{item.createTime}}' data-used='{{item.used}}' data-couponId="{{item.couponId}}" data-indx='{{index}}' data-name='{{item.name}}' data-des  cription='{{item.description}}'>立即使用</view> 
+            <view class='ticket_btn' wx:if="{{item.type == 0}}" data-des>查看</view>
             <view class='ticket_btn2' wx:else catchtap="copy" data-secretWords='{{item.secretWords}}' data-des  cription='{{item.description}}'>一键复制</view>
           </view>
           <view class='ticket_business'>
-            <view><text class='iconfont2 icon-location'>搜周边</text></view>
-            <view data-addr='{{item.businessAddress}}' bindtap="navigate"><text class='iconfont2 icon-location'>导航到</text></view>
-            <view bindtap="toIntroduce" data-id='{{item.businessId}}'><text class='iconfont2 icon-caidan'>商家介绍</text></view>
+            <view catchtap="searchNearby"><text class='iconfont2 icon-location'>搜周边</text></view>
+            <view data-addr='{{item.businessAddress}}' catchtap="navigate"><text class='iconfont2 icon-location'>导航到</text></view>
+            <view catchtap="toIntroduce" data-id='{{item.businessId}}'><text class='iconfont2 icon-caidan'>商家介绍</text></view>
           </view>
         </view>
       </view>
-      <view class='info_btn' bindtap='toggleBtn' data-flag='false' id='{{item.id}}'>使用提示<text class="iconfont icon-less"></text></view>
+      <view class='info_btn' catchtap='toggleBtn' data-flag='false' id='{{item.id}}'>使用提示<text class="iconfont icon-less"></text></view>
     </view>
 
     <view class="info {{uhide==item.id?'':'infoH'}}" wx:if="{{item.description}}">
@@ -47,7 +46,7 @@
 <!-- 已使用 -->
 <view class="{{selected1?'show':'hidden'}}">
 <view class='ticket_wrap' wx:for="{{contentlist}}" wx:if="{{item.used == 1}}" wx:key="{{item.id}}">
-  <view class='ticket_box' style='background:url(https://h5.hdiandian.com/cash_bg.png) no-repeat;background-size:100% 100%;'>
+  <view class='ticket_box' catchtap="showMask" data-prizeid='{{item.prizeId}}' data-id='{{item.id}}' data-time='{{item.createTime}}' style='background:url(https://h5.hdiandian.com/cash_bg.png) no-repeat;background-size:100% 100%;'>
     <view class='ticket_main'>
       <view class='ticket_value'>
         <view class='ticket_value_content'>
@@ -60,16 +59,16 @@
         <view class='ticket_t' wx:if="{{!item.name}}">恭喜获得抵扣代金券</view>
         <view class='ticket_time'>
           <text>有效时间：\n{{item.createTime}}-{{item.deadline}}</text>
-          <view class='ticket_used' data-id='{{item.id}}' data-worth="{{item.worth}}" data-createTime="{{item.createTime}}"                   data-used='{{item.used}}' data-couponId="{{item.couponId}}">已使用</view> 
+          <view class='ticket_used'>已使用</view> 
         </view>
         <view class='ticket_business'>
-          <view><text class='iconfont2 icon-location'>搜周边</text></view>
-          <view data-addr='{{item.businessAddress}}' bindtap="navigate"><text class='iconfont2 icon-location'>导航到</text></view>
-          <view bindtap="toIntroduce" data-id='{{item.businessId}}'><text class='iconfont2 icon-caidan'>商家介绍</text></view>
+          <view catchtap="searchNearby"><text class='iconfont2 icon-location'>搜周边</text></view>
+          <view data-addr='{{item.businessAddress}}' catchtap="navigate"><text class='iconfont2 icon-location'>导航到</text></view>
+          <view catchtap="toIntroduce" data-id='{{item.businessId}}'><text class='iconfont2 icon-caidan'>商家详情</text></view>
         </view>
       </view>
     </view>
-    <view class='info_btn' bindtap='toggleBtn' data-flag='false' id='{{item.id}}'>使用提示<text class="iconfont icon-less"></text></view>
+    <view class='info_btn' catchtap='toggleBtn' data-flag='false' id='{{item.id}}'>使用提示<text class="iconfont icon-less"></text></view>
   </view>
 
   <view class="info {{uhide==item.id?'':'infoH'}}" wx:if="{{item.description}}">
@@ -87,7 +86,7 @@
 <!-- 已过期 -->
 <view class="{{selected2?'show':'hidden'}}">
 <view class='ticket_wrap' wx:for="{{contentlist}}" wx:if="{{item.used==-1}}" wx:key="{{item.id}}">
-  <view class='ticket_box' style='background:url(https://h5.hdiandian.com/cash_bg.png) no-repeat;background-size:100% 100%;'>
+  <view class='ticket_box' catchtap="showMask" data-prizeid='{{item.prizeId}}' data-id='{{item.id}}' data-time='{{item.createTime}}' style='background:url(https://h5.hdiandian.com/cash_bg.png) no-repeat;background-size:100% 100%;'>
     <view class='ticket_main'>
       <view class='ticket_value'>
         <view class='ticket_value_content'>
@@ -100,16 +99,16 @@
         <view class='ticket_t' wx:if="{{!item.name}}">恭喜获得抵扣代金券</view>
         <view class='ticket_time'>
           <text>有效时间：\n{{item.createTime}}-{{item.deadline}}</text>
-          <view class='ticket_used' data-id='{{item.id}}' data-worth="{{item.worth}}" data-createTime="{{item.createTime}}" data-used='{{item.used}}' data-couponId="{{item.couponId}}">已过期</view> 
+          <view class='ticket_used'>已过期</view> 
         </view>
         <view class='ticket_business'>
-          <view><text class='iconfont2 icon-location'>搜周边</text></view>
-          <view data-addr='{{item.businessAddress}}' bindtap="navigate"><text class='iconfont2 icon-location'>导航到</text></view>
-          <view bindtap="toIntroduce" data-id='{{item.businessId}}'><text class='iconfont2 icon-caidan'>商家介绍</text></view>
+          <view catchtap="searchNearby"><text class='iconfont2 icon-location'>搜周边</text></view>
+          <view data-addr='{{item.businessAddress}}' catchtap="navigate"><text class='iconfont2 icon-location'>导航到</text></view>
+          <view catchtap="toIntroduce" data-id='{{item.businessId}}'><text class='iconfont2 icon-caidan'>商家介绍</text></view>
         </view>
       </view>
     </view>
-    <view class='info_btn' bindtap='toggleBtn' data-flag='false' id='{{item.id}}'>使用提示<text class="iconfont icon-less"></text></view>
+    <view class='info_btn' catchtap='toggleBtn' data-flag='false' id='{{item.id}}'>使用提示<text class="iconfont icon-less"></text></view>
   </view>
 
   <view class="info {{uhide==item.id?'':'infoH'}}" wx:if="{{item.description}}">

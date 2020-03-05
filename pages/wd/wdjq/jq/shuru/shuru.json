@@ -1,7 +1,7 @@
 {
   "navigationBarBackgroundColor": "#CC463D",
-  "navigationBarTextStyle": "black",
-  "navigationBarTitleText": "代金券",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "奖券",
   "backgroundColor": "#eeeeee",
   "backgroundTextStyle": "light"
 }

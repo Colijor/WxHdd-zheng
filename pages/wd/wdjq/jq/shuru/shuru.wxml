@@ -1,20 +1,52 @@
-<view class='beijin'>
-  <view class='xiangqin'>
-  <view class='couponTitle'><text wx:if="{{name}}">{{name}}</text><text wx:if="{{worth!=0}}">{{worth/100}}元</text></view>
-    <view class='state'>
-      请商家输入手机号码即可使用
-    </view>
-    <view class='phone_box'>
-      <text class='phone'>手机号码:</text>
-    <input type='number' placeholder-class="place-holder" class='phone_inpt' maxlength="11" name="userName" placeholder="请输入商家手机号"     bindinput="getPhone" />
-    </view>
-    <view class='userInfo'>
-      <view class='usrInfoT'>使用提示：</view>
-      <view class='usrInfoC'>
-      <view>用户使用时，请向商家出示此页面，商家输入手机号后使用完成，使用后此券消失。</view>
+<!-- <view class='beijin'> -->
+  <!-- <view class='xiangqin'> -->
+  <!-- <view class='couponTitle'><text wx:if="{{name}}">{{name}}</text><text wx:if="{{worth!=0}}">{{worth/100}}元</text></view> -->
+    <!-- <view class='state'> -->
+      <!-- 请商家输入手机号码即可使用 -->
+    <!-- </view> -->
+    <!-- <view class='phone_box'> -->
+      <!-- <text class='phone'>手机号码:</text> -->
+    <!-- <input type='number' placeholder-class="place-holder" class='phone_inpt' maxlength="11" name="userName" placeholder="请输入商家手机号"     bindinput="getPhone" /> -->
+    <!-- </view> -->
+    <!-- <view class='userInfo'> -->
+      <!-- <view class='usrInfoT'>使用提示：</view> -->
+      <!-- <view class='usrInfoC'> -->
+      <!-- <view>用户使用时，请向商家出示此页面，商家输入手机号后使用完成，使用后此券消失。</view> -->
       <!-- <view>{{description}}</view> -->
-      </view>
-    </view>
-    <view class='queding' bindtap='submitBtn'>确定</view>
+      <!-- </view> -->
+    <!-- </view> -->
+    <!-- <view class='queding' bindtap='submitBtn'>确定</view> -->
+  <!-- </view> -->
+<!-- </view> -->
+
+<!-- <view wx:if="{{poster.length>0}}" class='swiper_wrap'>
+  <view class='swiper-block'>
+    <swiper autoplay='true' circular='true' current='{{current}}' bindchange="swiperChange" style="widt: 100%;height: 100%;">
+      <block wx:key='img' wx:for='{{poster}}'>
+        <swiper-item>
+          <image mode='aspectFill' src="{{item}}" class='slide-image' bindtap="previewImg" data-previewurl="{{poster}}" data-currenturl="{item}}"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view wx:if="{{poster.length>0}}" class="imageCount">{{current+1}}/{{poster.length}}</view>
   </view>
+  <button type="primary" style="width: 50vw; height: 80rpx;line-height:80rpx;" bindtap="submitBtn"> 使用 </button>
+</view>
+<view wx:else class='swiper_wrap'>
+  <image mode='aspectFill' src='../../../../../images/noPoster.png'/>
+  <button type="primary" style="width: 50vw; height: 80rpx;line-height:80rpx;" bindtap="submitBtn"> 使用 </button>
+</view> -->
+
+<view class='swiper_wrap'>
+  <view class='swiper-block'>
+    <swiper autoplay='true' circular='true' current='{{current}}' bindchange="swiperChange" style="widt: 100%;height: 100%;">
+      <block wx:key='img' wx:for='{{poster}}'>
+        <swiper-item>
+          <image mode='aspectFill' src="{{item}}" class='slide-image' bindtap="previewImg" data-previewurl="{{poster}}" data-currenturl="{{item}}"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view wx:if="{{oldPoster}}" class="imageCount">{{current+1}}/{{poster.length}}</view>
+  </view>
+  <button type="primary" style="width: 50vw; height: 80rpx;line-height:80rpx;" bindtap="submitBtn"> 使用 </button>
 </view>

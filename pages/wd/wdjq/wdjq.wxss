@@ -44,12 +44,12 @@ page{
 
 
 .ticket_wrap{width: 100%;margin:14rpx auto;}
-.ticket_box{width: 94%;margin: 0 auto;border-radius:4rpx;position: relative}
+.ticket_box{width: 94%;margin: 0 auto;border-radius:4rpx;position: relative;background-color: #fff;}
 .ticket_main{display: flex;justify-content: space-between;}
 
 .ticket_value{flex: 1;color: #E32E26;text-align:center;position: relative;padding:0 10rpx;}
 .ticket_value_limit{flex: 1;color: #ffab5b;text-align:center;position: relative;padding:0 10rpx;}
-.ticket_btn,.ticket_btn2{text-align:center;background:#E32E26;color: white;font-size: 22rpx;width: 120rpx;line-height: 70rpx;border-radius: 8rpx;position: absolute;top:2%;right:6%;
+.ticket_btn,.ticket_btn2{text-align:center;background:#E32E26;color: white;font-size: 22rpx;width: 120rpx;line-height: 70rpx;border-radius: 50rpx;position: absolute;top:2%;right:6%;
 }
 .ticket_btn2{background:rgb(4, 192, 76);}
 .ticket_btn_limit{text-align:center;background:#ffab5b;color: white;font-size: 22rpx;width: 120rpx;line-height: 70rpx;border-radius: 8rpx;position: absolute;top:2%;right:6%;
@@ -60,17 +60,17 @@ page{
 .cash_num{font-size: 48rpx}
 .ticket_content{flex: 4;}
 .ticket_t{color: #111111;font-size:40rpx;font-weight:bold;padding-top:10rpx;}
-.ticket_time{border-bottom: 4rpx solid #C6C5C5;position: relative;padding-top:10rpx;margin-right:10rpx;
+.ticket_time{border-bottom: 4rpx solid #C6C5C5;position: relative;padding-top:10rpx;margin-right:20rpx;
 padding-bottom:10rpx;}
 .ticket_time text{font-size: 24rpx;color: #171717}
-.ticket_business{border-bottom: 4rpx solid #C6C5C5;position: relative;padding-top:10rpx;margin-right:10rpx;padding-bottom:10rpx;font-size: 30rpx;display: flex;justify-content: space-between;}
+.ticket_business{border-bottom: 4rpx solid #C6C5C5;position: relative;padding-top:10rpx;margin-right:20rpx;padding-bottom:10rpx;font-size: 30rpx;display: flex;justify-content: space-between;}
 .ticket_used{text-align:center;background: #dbdbdb;color: darkgray;font-size: 22rpx;width: 120rpx;line-height: 70rpx;position: absolute;top:2%;right:6%;border:2rpx solid darkgray;border-radius:50rpx;}
 
 .info_btn{font-size: 30rpx;padding:1% 0 1% 22%;}
-.info{background: #F5F3F3;padding: 0rpx 10rpx;width: 90%;margin-top: 20rpx;margin:10rpx auto 0}
+.info{background: #F5F3F3;padding: 0rpx 10rpx;width: 90%;margin-top: 20rpx;margin:10rpx auto 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .infoH{display: none;}
 .infoS{display: block;}
-.info text{font-size: 24rpx;color:#171717 }
+.info text{font-size: 24rpx;color:#171717;}
 .mark{display: none;}
 
 @font-face {

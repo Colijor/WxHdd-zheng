@@ -12,21 +12,6 @@ Page({
     picture: [],
   },
   /**
-   * 轮播滑动时，获取当前的轮播id
-   */
-  swiperChange(e) {
-    var that = this;
-    if (e.detail.source == 'touch') {
-      that.setData({
-        current: e.detail.current
-      })
-    }
-    // console.log(e.detail.current);
-  },
-  usePic: function(){
-    console.log(this.data.current);
-  },
-  /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
@@ -46,6 +31,7 @@ Page({
         "Content-Type": "application/json"
       },
       success: function(res){
+        console.log(res.data);
         if(res.data.code == 0){
           if(res.data.data.picture){
             var pic = [];
@@ -76,15 +62,33 @@ Page({
     })
   },
   getPhoneNum: function (e) {
-    var dutyPhone = this.data.busInfo.dutyPhone;
-    console.log(dutyPhone);
+    var fixedPhone = this.data.busInfo.fixedPhone;
+    console.log(fixedPhone);
     wx.showActionSheet({
-      itemList: ['客服电话：' + dutyPhone],
+      itemList: ['客服电话：' + fixedPhone],
       success: function (res) {
         wx.makePhoneCall({
-          phoneNumber: dutyPhone,
+          phoneNumber: fixedPhone,
         })
       }
+    })
+  },
+  /**
+   * 轮播滑动时，获取当前的轮播id
+   */
+  swiperChange(e) {
+    const that = this;
+    that.setData({
+      current: e.detail.current,
+    });
+  },
+  //预览图片
+  previewImg: function (e) {
+    var currentUrl = e.currentTarget.dataset.currenturl
+    var previewUrls = e.currentTarget.dataset.previewurl
+    wx.previewImage({
+      current: currentUrl, //必须是http图片，本地图片无效
+      urls: previewUrls, //必须是http图片，本地图片无效
     })
   },
   /**

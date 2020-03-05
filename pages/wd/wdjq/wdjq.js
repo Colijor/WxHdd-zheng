@@ -59,59 +59,21 @@ Page({
     });
     this.getCouponsInfo('正在加载数据...');
   },
-  showMask1: function (e) {
+  //查看
+  showMask: function(e) {
     console.log(e);
     var that = this;
-    var worth = e.currentTarget.dataset.worth;
-    var name = e.currentTarget.dataset.name;
-    var description = e.currentTarget.dataset.description;
-    var id = e.currentTarget.dataset.id;
-    var createTime = e.currentTarget.dataset.time;
-    var usedTime = new Date(createTime).getTime();
-    var clickTime = (new Date()).getTime();
-    var couponId = e.currentTarget.dataset.couponid;
-    var indx = e.currentTarget.dataset.indx;
-    if (name == undefined) {
-      name = "恭喜获得抵扣代金券";
-    };
-
-    if (clickTime >= usedTime) {
-      wx.navigateTo({
-        url: 'jq/shuru/shuru?id=' + id + "&worth=" + worth + "&name=" + name + "&description=" + description,
-      });
-    } else {
-      wx.showToast({
-        title: '此券还不能使用',
-        icon: 'none',
-        duration: 2000,
-        mask: true
-      })
-    }
-
-  },
-  //立即使用
-  showMask2: function(e) {
-    console.log(e);
-    var that = this;
-    var worth = e.currentTarget.dataset.worth;
-    var name = e.currentTarget.dataset.name;
-    var description = e.currentTarget.dataset.description;
     var createTime = e.currentTarget.dataset.time;
     var usedTime = new Date(createTime).getTime();
     var clickTime=(new Date()).getTime();
     console.log(new Date(createTime).getTime());
     console.log(clickTime);
     var id = e.currentTarget.dataset.id;
-    var couponId = e.currentTarget.dataset.couponid;
-    // var scenecode = e.currentTarget.dataset.scenecode;
-    var used = e.currentTarget.dataset.used;
-    if(name==undefined){
-      name ="恭喜获得抵扣代金券";
-    };
+    var prizeid = e.currentTarget.dataset.prizeid;
 
     if (clickTime >= usedTime){
       wx.navigateTo({
-        url: 'jq/shuru/shuru?id=' + id + "&worth=" + worth + "&name=" + name + "&description=" + description,
+        url: 'jq/shuru/shuru?id=' + id + '&prizeid='+prizeid,
       });
     }else{
       wx.showToast({
@@ -121,7 +83,15 @@ Page({
         mask: true
       })
     }
-   
+  },
+  // 搜周边优惠券
+  searchNearby: function(){
+    wx.showToast({
+      title: '暂时不支持',
+      icon: 'none',
+      duration: 2000,
+      mask: true
+    });
   },
   //点击提示
   toggleBtn:function(event){
